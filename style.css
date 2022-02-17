@@ -18,15 +18,23 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5%;
 }
 input{
     width: 30%;
     height: 60%;
 }
+.result{
+    padding: 5%;
+    outline: 1px solid red;
+}
+
+span{
+  border: 1px solid green;
+  display: inline-block;
+}
 
 p{
-  background-color: red;
-  border: 1px solid green;
-  display: inline-block
+    display: inline-block;
+    background-color: red;
+
 }
