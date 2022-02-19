@@ -33,10 +33,6 @@ function validation() {
     }
   }
 
-
-
-
-
     result.innerHTML = '';
   for (let x = 0; x < arr2.length; x++) {
     if (arr2[x].includes('<>')) {
@@ -45,36 +41,35 @@ function validation() {
     }
 
     if (arr2[x].toLowerCase().includes(val.join(''))) {
-
-      
-      for (let m = 0; m < fin().length; m++) {
-       // if (arr2[x].includes(fin()[m])) {
-        console.log(arr3, arr3[m])
-
-          
           letter = arr2[x].replace('<>', '').replace('</>', '').replace('<p>', '').replace('</p>', '');
 
-          for (let a=0; a<letter.split('').length; a++){
-             // if(fin()[m] == letter[a])
-            letter2 += fin()[m];
-            letter3 += letter[a]
-            //console.log(fin()[m],letter[a], m, a)
-          //total = letter.replace(letter3, `<p>${letter2}</p>`)
+      for (let m = 0; m < fin().length; m++) {
 
-          }
+        if(letter[m] == fin()[m]){
+          letter2 += fin()[m];
+          letter3 += letter[m]
+          console.log('if')
+        }
 
-          
+        if(letter2 == '' || letter3 == ''){
+         for(let a=0; a < letter.length; a++){
+
+            if(fin()[m] == letter[a]){
+              letter2 += fin()[m];
+              letter3 += letter[a]
+            }
+
+          } 
+}
+
+          total = letter.replace(letter3, `<p>${letter2}</p>`)
          
-          //console.log(letter, total, arr[x], fin()[m])
-         
-         arr2[x] = total;
-          /* if (m  >= fin().length-1) {
+          arr2[x] = total;
+           if (m  >= fin().length-1) {
             total = `<span>${arr2[x]}</span>`;
             arr2[x] = total;
-          }  */
+          }
 
-          
-        //}
       }
       letter2 = '';
       letter3 = '';
@@ -95,8 +90,6 @@ function validation() {
 
 
 } //End function
-
-
 
 
 function reset(){
